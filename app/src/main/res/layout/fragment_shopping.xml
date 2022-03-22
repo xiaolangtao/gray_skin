@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <View
+        android:id="@+id/background_yellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFDA41"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_first"
+        app:layout_constraintStart_toStartOf="@+id/guideline_two"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top"
+        app:srcCompat="@mipmap/mine_icon_shezhi" />
+
+    <Button
+        android:id="@+id/btn_jiajinbi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape_btn_jiajinbi"
+        android:drawableStart="@mipmap/mine_icon_jia_jinbi"
+        android:text="1314"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_first"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/imgbtn_setting"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <ImageView
+        android:id="@+id/iv_avatar_bg"
+        android:layout_width="87dp"
+        android:layout_height="87dp"
+        android:background="@mipmap/mine_icon_bj_moren"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_second"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_first" />
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_second"
+        app:layout_constraintCircle="@id/iv_avatar_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_avatar_bg"
+        app:layout_constraintTop_toTopOf="@+id/guideline_first"
+        tools:srcCompat="@mipmap/mine_icon_moren" />
+
+    <TextView
+        android:id="@+id/tv_bangding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/shape_btn_bangding"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="绑定微信"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar_bg"
+        app:layout_constraintCircle="@id/iv_avatar_bg"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="25dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="用户ID"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_second"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar_bg"
+        app:layout_constraintTop_toTopOf="@+id/guideline_first"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <TextView
+        android:id="@+id/tv_qiandao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="#000000"
+        android:padding="3dp"
+        android:paddingStart="15dp"
+        android:text="签到领取"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_qiandao"
+        app:layout_constraintTop_toTopOf="@+id/guideline_first" />
+
+    <ImageButton
+        android:id="@+id/btn_qiandao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_second"
+        app:layout_constraintStart_toStartOf="@+id/guideline_two"
+        app:layout_constraintTop_toTopOf="@+id/guideline_first"
+        app:srcCompat="@mipmap/mine_icon_qiandao" />
+
+    <ImageView
+        android:id="@+id/iv_qiandao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@id/btn_qiandao"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="20dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_two"
+        app:layout_constraintTop_toTopOf="@+id/guideline_first"
+        app:srcCompat="@mipmap/mine_icon_denglu" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <TextView
+        android:id="@+id/tv_attention"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:text="提示：未绑定微信也能正常兑换周边！请放心~"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_third"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_second" />
+
+    <TextView
+        android:id="@+id/tv_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音效"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_third"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@+id/tv_qiandao" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <View
+        android:id="@+id/background_kabao"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@mipmap/mine_bj_xydai"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_third"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_kabao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_white"
+        app:layout_constraintStart_toStartOf="@+id/background_kabao"
+        app:layout_constraintTop_toTopOf="@+id/guideline_third"
+        app:srcCompat="@mipmap/mine_icon_kabao" />
+
+    <TextView
+        android:id="@+id/tv_kabao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="卡包：190张"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_white"
+        app:layout_constraintStart_toEndOf="@+id/iv_kabao"
+        app:layout_constraintTop_toBottomOf="@+id/tv_attention" />
+
+    <ImageButton
+        android:id="@+id/btn_kabao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_white"
+        app:layout_constraintEnd_toEndOf="@+id/background_kabao"
+        app:layout_constraintTop_toTopOf="@+id/guideline_third"
+        app:srcCompat="@mipmap/mine_icon_gengduo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <GridView
+        android:id="@+id/gv_function"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_grid"
+        android:gravity="center"
+        android:numColumns="3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_grid"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_white">
+
+    </GridView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_web_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_web_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_web_start" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_web_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_task_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.61" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_grid"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_task_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_task_start"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_task_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <CheckBox
+        android:id="@+id/checkBox_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:button="@drawable/selector_checkbox_sound"
+        android:checked="true"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_third"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sound"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_qiandao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

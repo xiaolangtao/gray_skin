@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/main_radio_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/main_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rg"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_rg_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_rg_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_rg_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_rg_top">
+
+        <RadioButton
+            android:id="@+id/main_rb_shopping"
+            style="@style/mainRadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableTop="@mipmap/shopping"
+            android:text="商城"
+            android:textColor="@drawable/selector_rg_text_color_" />
+
+        <RadioButton
+            android:id="@+id/main_rb_draw"
+            style="@style/mainRadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/choujiang"
+            android:text="抽奖"
+            android:textColor="@drawable/selector_rg_text_color_" />
+
+        <RadioButton
+            android:id="@+id/main_rb_party"
+            style="@style/mainRadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/huodong"
+            android:text="活动"
+            android:textColor="@drawable/selector_rg_text_color_" />
+
+        <RadioButton
+            android:id="@+id/main_rb_my"
+            style="@style/mainRadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/wode"
+            android:text="我的"
+            android:textColor="@drawable/selector_rg_text_color_" />
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_rg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_rg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_rg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_rg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
