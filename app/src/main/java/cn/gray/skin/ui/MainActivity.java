@@ -1,15 +1,17 @@
 package cn.gray.skin.ui;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.WindowManager;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.RadioGroup;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cn.gray.skin.R;
 import cn.gray.skin.fragment.DrawFragment;
 import cn.gray.skin.fragment.MyFragment;
