@@ -1,17 +1,12 @@
 package cn.gray.skin.ui;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.WindowManager;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cn.gray.skin.R;
 import cn.gray.skin.fragment.DrawFragment;
 import cn.gray.skin.fragment.MyFragment;
@@ -28,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         initRadioGroup();
         initFragment();
     }

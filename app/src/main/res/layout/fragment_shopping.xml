@@ -37,19 +37,32 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_top"
         app:srcCompat="@mipmap/mine_icon_shezhi" />
 
-    <Button
-        android:id="@+id/btn_jiajinbi"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+    <TextView
+        android:id="@+id/tv_jiajinbi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/shape_btn_jiajinbi"
-        android:drawableStart="@mipmap/mine_icon_jia_jinbi"
+        android:padding="4dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="10dp"
         android:text="1314"
-        android:textSize="14sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guideline_first"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
-        app:layout_constraintStart_toEndOf="@+id/imgbtn_setting"
         app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
+    <ImageButton
+        android:id="@+id/btn_jiajinbi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_first"
+        app:layout_constraintCircle="@id/tv_jiajinbi"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="25dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top"
+        app:srcCompat="@mipmap/mine_icon_jia_jinbi"
+        tools:layout_editor_absoluteX="189dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_first"
@@ -155,9 +168,10 @@
         android:id="@+id/tv_attention"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:text="提示：未绑定微信也能正常兑换周边！请放心~"
         android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_third"
         app:layout_constraintEnd_toStartOf="@+id/guideline_two"
         app:layout_constraintStart_toStartOf="@+id/guideline_start"
@@ -179,7 +193,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.21" />
+        app:layout_constraintGuide_percent="0.205" />
 
     <View
         android:id="@+id/background_kabao"
@@ -246,7 +260,7 @@
         android:id="@+id/gv_function"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/shape_grid"
+        android:background="@drawable/shape_white_bg"
         android:gravity="center"
         android:numColumns="3"
         app:layout_constraintBottom_toTopOf="@+id/guideline_grid"
@@ -299,7 +313,7 @@
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/shape_grid"
+        android:background="@drawable/shape_white_bg"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_task_end"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"
