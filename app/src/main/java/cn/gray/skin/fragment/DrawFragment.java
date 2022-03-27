@@ -115,6 +115,12 @@ public class DrawFragment extends Fragment {
         dakaList.add(daka2);
         Daka daka3 = new Daka(R.mipmap.icon_kuang, R.mipmap.icon_dqm_333, "第3天", IConstant.DAKA_LINGQU);
         dakaList.add(daka3);
+        Daka daka4 = new Daka(R.mipmap.icon_kuang, R.mipmap.icon_dqm_444, "第4天", IConstant.DAKA_LINGQU);
+        dakaList.add(daka4);
+        Daka daka5 = new Daka(R.mipmap.icon_kuang, R.mipmap.icon_dqm_555, "第5天", IConstant.DAKA_LINGQU);
+        dakaList.add(daka5);
+        Daka daka6 = new Daka(R.mipmap.icon_kuang, R.mipmap.icon_dqm_666, "第6天", IConstant.DAKA_LINGQU);
+        dakaList.add(daka6);
 
         DakaAdapter adapter = new DakaAdapter(getActivity(), dakaList);
         gridView.setAdapter(adapter);
